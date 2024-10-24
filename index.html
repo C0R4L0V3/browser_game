@@ -6,18 +6,35 @@
     <title>Browser Game</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   
+    <div>
+        <h1 id="tictactoe">Tic Tac Toe</h1>
+    </div>
+
+     <div id="game" width="600" height="600">
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>  
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div class="reset">
+        <button id="resetbutton">Reset</button>
+    </div>    
 
 
 
