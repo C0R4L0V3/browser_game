@@ -4,23 +4,66 @@
 // future development change to X's and O's
 // future development for Winner Sign
 
-//Const's
-const boxes = document.querySelectorAll(".box")
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CONSTANTS
+const boxes = document.querySelectorAll(".box")     //<<-- selects all divs with the class "box"
 const resetButton = document.querySelector("button")
 const winningCombo = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
-    [1, 4, 7],
+    [1, 4, 7],                      //<<--- nested array of winning combos to be used down the line.
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
 ] 
-const bgcolors = ["bisque","bisque","bisque","bisque","bisque","bisque","bisque","bisque","bisque" ]
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~STAT VARIBLES
+
+let turnPhase = true
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS
+
+//Would need an array function, "Handlers" to handle the winning combo array
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EVENT LISTENERS
+
+boxes.forEach((box) => {
+    box.addEventListener('click', (event) => {
+        // console.log(event.target.classList.contains("blank"))
+        if(event.target.classList.contains("blank")  && turnPhase === true)  { //<<--- comapares if both statements are booleen
+            console.log("banana")
+            event.target.classList.replace("blank", "blue") //<<--- replaces the classlist from "blank" to "blue"
+            // box.style.backgroundColor = "blue"
+            turnPhase = false                     //<<-- changes the value of turn phase to false
+    
+        }else if(event.target.classList.contains("blank") && turnPhase === false){
+            event.target.classList.replace("blank", "red")
+            // color = "red"
+            // box.style.backgroundColor = "red"
+            turnPhase = true
+        } else if (event.target.classList === "red" || event.target.classList === "blue"){ //<<-- does Null if either condition is met
+        }
+    })
+})
+
+   resetButton.addEventListener('click', (event) => {
+        // console.log("Hi, this is a reset button!");
+        location.reload()                   //<<--- learned from Glenn  -cl // **location.reload refreshes the window!
+    })
+ 
+
+
+//=============================================BAD CODE===================================================\\
+
+// const classlist = ""
+
+// const bgcolors = ["bisque","bisque","bisque","bisque","bisque","bisque","bisque","bisque","bisque" ]
+
+// let round = 0;
 
 // let isDone = true
-let blueTurn = true
+
 // let redturn =true
 
 // const bluePlayer = (event) => {
@@ -53,31 +96,6 @@ let blueTurn = true
 // }
 
 //eventlistener
-//***********************************
-boxes.forEach((box) => {
-        box.addEventListener('click', (event) => {
-            for(let i = 0; i<= bgcolors.length; i++){
-            if(i === "bisque" && blueTurn === true) {
-                i = "blue"
-                box.style.backgroundColor = i
-                blueTurn = false
-            }else{
-                i = "red"
-                box.style.backgroundColor = i
-                blueTurn = true
-            }
-        }
-        })
-    
-    });
-        resetButton.addEventListener('click', (event) => {
-            // console.log("Hi, this is a reset button!");
-            boxes.forEach((box) => {
-                box.style.backgroundColor=" bisque"; 
-            })
-        })
-        
-        
 
 //    evalColor(event)
        
