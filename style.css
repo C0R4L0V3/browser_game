@@ -23,6 +23,12 @@ h1{
     text-align: center;
 }
 
+.gameStatus{
+    display: relative;
+    text-align: center;
+    top: 100px;
+}
+
 .reset {
     display: flex;
     align-items: center;
