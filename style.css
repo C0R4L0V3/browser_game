@@ -50,14 +50,24 @@ h1{
 }
 
 .blue {
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;          /* added flexbox to align content and adjusted color to the text */
+    color: blue;
+    background-color: bisque;
     border: 1px solid black;
     width: 200px;
     height: 200px;
 }
 
 .red {
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: red;             /* added flexbox to align content and adjusted color to the text */
+    background-color: bisque;
     border: 1px solid black;
     width: 200px;
     height: 200px;
