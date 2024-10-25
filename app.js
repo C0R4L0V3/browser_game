@@ -1,8 +1,8 @@
 //steps to setup:
-// Make Box clickable to match color to player turn
-// Clear the board after each game
-// future development change to X's and O's
-// future development for Winner Sign
+// ✔ 1. Make Box clickable to match color to player turn
+// ✔ 2. Clear the board after each game
+// ✔ 3. Future development change to X's and O's     
+//   4. Future development for game status; display turn phase, game status
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CONSTANTS
 const boxes = document.querySelectorAll(".box")     //<<-- selects all divs with the class "box"
@@ -36,11 +36,11 @@ boxes.forEach((box) => {                //<<-- forEach loop to go through div bo
             event.target.classList.replace("blank", "blue") //<<--- replaces the classlist from "blank" to "blue" -Cl
             event.target.innerText = "X"  //<<--- changed from changing the entire dix box blue to a blue "x" text -CL
             // box.style.backgroundColor = "blue"
-            turnPhase = false                     //<<-- changes the value of turn phase to false -CL
+            turnPhase = false        //<<-- changes the value of turn phase to false -CL
     
         }else if(event.target.classList.contains("blank") && turnPhase === false){
             event.target.classList.replace("blank", "red")
-            event.target.innerText = "O" //<<--- changed from changing the entire dix box blue to a blue "o" text - CL
+            event.target.innerText = "O" //<<--- changed from changing the entire div box blue to a blue "o" text - CL
             // color = "red"
             // box.style.backgroundColor = "red"
             turnPhase = true

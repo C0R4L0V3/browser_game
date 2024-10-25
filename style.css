@@ -57,11 +57,11 @@ h1{
 
 .blue {
     display: flex;
-    align-items: center;
+    align-items: center;        /* added flexbox to align content and adjusted color to the text */
     justify-content: center;
-    font-weight: 800;          /* added flexbox to align content and adjusted color to the text */
-    color: blue;
-    background-color: bisque;
+    font-weight: 800;           /* added font weight to make lettering more visable */
+    color: blue;              /* added blue color property */
+    background-color: bisque; /* changed background-color from blue to bisque */
     border: 1px solid black;
     width: 200px;
     height: 200px;
@@ -69,11 +69,11 @@ h1{
 
 .red {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: red;             /* added flexbox to align content and adjusted color to the text */
-    background-color: bisque;
+    align-items: center;          /* added flexbox to align content and adjusted color to the text */
+    justify-content: center;            
+    font-weight: 800;             /* added font weight to make lettering more visable */
+    color: red;                 /* added blue color property */
+    background-color: bisque;   /* changed background-color from blue to bisque */
     border: 1px solid black;
     width: 200px;
     height: 200px;
